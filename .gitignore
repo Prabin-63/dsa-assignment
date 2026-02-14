@@ -55,3 +55,4 @@ dkms.conf
 *.dwo
 .vscode
 .prog_1.exe
+.DS_Store
