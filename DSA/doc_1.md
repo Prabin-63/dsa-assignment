@@ -36,4 +36,4 @@ This program checks whether a given mathematical expression has balanced parenth
     - Returns balanced if all brackets match and the stack is empty
 
 ## Sample Output
-![O1](output/O1.png "Program 1 output")
+![O1](Output/O1.png "Program 1 output")

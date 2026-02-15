@@ -40,4 +40,4 @@ This program converts a given infix expression into postfix notation and evaluat
   - Final value is the result
 
 ## Sample Output
-![O2](output/O2.png "Program 2 output")
+![O2](Output/O2.png "Program 2 output")

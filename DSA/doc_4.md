@@ -34,7 +34,7 @@ struct Node {
 - Traverses the list from head.
 - Prints all node values.
 
-### ON main
+### ON `main()`
 - Initial list:
         2  3  4
 
@@ -46,4 +46,4 @@ struct Node {
         2  25  4
 
 ## Sample Output
-![O4](output/O4.png "Program 4 output")
+![O4](Output/O4.png "Program 4 output")

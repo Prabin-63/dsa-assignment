@@ -75,4 +75,4 @@ Printing happens while returning:
 
 ## Sample Output
 
-![O3](output/O3.png "Program 3 output")
+![O3](Output/O3.png "Program 3 output")
