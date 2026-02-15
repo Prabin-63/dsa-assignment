@@ -1,18 +1,17 @@
-/*Write a program to convert an infix mathematical expression to postfix and evaluate it.*/
-
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>  
 #define MAX 50
 
 char stack[MAX];
 int top = -1;
 
-// Stack operations 
-//Push
+// Stack operations
+//push
 void push(char x) {
     stack[++top] = x;
 }
-//Pop
+//pop
 char pop() {
     return stack[top--];
 }
@@ -22,10 +21,11 @@ int priority(char x) {
     if (x == '(') return 0;
     if (x == '+' || x == '-') return 1;
     if (x == '*' || x == '/') return 2;
+    if (x == '^') return 3; 
     return 0;
 }
 
-// Infix to Postfix
+// Infix to Postfix Conversion
 void infixToPostfix(char infix[], char postfix[]) {
     int i = 0, k = 0;
     char x;
@@ -38,11 +38,13 @@ void infixToPostfix(char infix[], char postfix[]) {
             push(infix[i]);
         }
         else if (infix[i] == ')') {
-            while ((x = pop()) != '(')
+            while (top != -1 && (x = pop()) != '(')
                 postfix[k++] = x;
         }
-        else {
-            while (priority(stack[top]) >= priority(infix[i]))
+        else { // Operator
+            while (top != -1 &&
+                   ((priority(stack[top]) > priority(infix[i])) ||
+                   (priority(stack[top]) == priority(infix[i]) && infix[i] != '^')))
                 postfix[k++] = pop();
             push(infix[i]);
         }
@@ -57,9 +59,10 @@ void infixToPostfix(char infix[], char postfix[]) {
 
 // Postfix Evaluation
 int evaluatePostfix(char postfix[]) {
-    int stack2[MAX];
+    double stack2[MAX];
     int top2 = -1;
-    int i, a, b;
+    int i;
+    double a, b;
 
     for (i = 0; postfix[i] != '\0'; i++) {
         if (isdigit(postfix[i])) {
@@ -73,6 +76,7 @@ int evaluatePostfix(char postfix[]) {
                 case '-': stack2[++top2] = a - b; break;
                 case '*': stack2[++top2] = a * b; break;
                 case '/': stack2[++top2] = a / b; break;
+                case '^': stack2[++top2] = pow(a, b); break;
             }
         }
     }
@@ -85,6 +89,7 @@ int main() {
     printf("Enter infix expression: ");
     scanf("%s", infix);
 
+    top = -1; // Reset stack
     infixToPostfix(infix, postfix);
 
     printf("Postfix expression: %s\n", postfix);

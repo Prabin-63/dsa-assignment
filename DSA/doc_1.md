@@ -3,11 +3,11 @@
 
 **Write a program to check if any given mathematical expression has a balanced number of parentheses or not?
 Run the program by testing following expression-
-⇒a + (b − c) ∗ (d
-⇒m + [a − b ∗ (c + d ∗ {m)]
+⇒a + (b − c) ∗ (d <br>
+⇒m + [a − b ∗ (c + d ∗ {m)] <br>
 ⇒a + (b − c)**
 
-### This program checks whether a given mathematical expression has balanced parentheses using a stack implemented with an array in C.
+This program checks whether a given mathematical expression has balanced parentheses using a stack implemented with an array in C.
 
 **Code Description**
 
@@ -35,5 +35,5 @@ Run the program by testing following expression-
     - Pops and matches brackets when a closing bracket is found
     - Returns balanced if all brackets match and the stack is empty
 
-### Sample Output
+## Sample Output
 ![O1](output/O1.png "Program 1 output")
