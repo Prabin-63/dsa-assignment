@@ -1,7 +1,9 @@
 # Doubly Linked List Implementation in C
 
 ## GIVEN QUESTION:
-**How can we implement a doubly linked list using structure? Write methods to insert (after a given node) and delete a node. Write `main()` to demonstrate the functions.**
+**How can we implement the doubly linked list using structure? Write a method to
+insert(after given node) and delete the node in a doubly linked list. Write main() to
+demonstrate the use of the functions.**
 
 This program implements a Doubly Linked List in C and performs insertion and deletion operations.
 
@@ -36,9 +38,11 @@ struct Node {
 
 ### ON `main()`
 - Initial list:
+
         2  3  4
 
 - After insertAfter(second, 25):
+
         2  3  25  4
 
 - After deleteNode(&head, second):

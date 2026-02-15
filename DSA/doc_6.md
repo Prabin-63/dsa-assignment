@@ -1,7 +1,7 @@
 # Build Min Heap and Max Heap from Unsorted Array in C
 
 ## GIVEN QUESTION:
-**Given an unsorted array, write a program to build the Min Heap and Max Heap.**
+**6. Given the array of the data (unsorted), Write a program to build the min and max heap.**
 
 This program converts an unsorted array into:
 - Min Heap

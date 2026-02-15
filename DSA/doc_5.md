@@ -1,7 +1,9 @@
 # Undirected Graph Using Adjacency Matrix with BFS and DFS in C
 
 ## GIVEN QUESTION:
-**How can we implement an undirected graph using an adjacency matrix? Write functions to implement BFS and DFS traversal. Demonstrate the program with an example graph.**
+**How can we implement the undirected graph using the adjacency matrix? Write a function
+that implements the BFS and DFS technique to traverse through the graph. Demonstrate
+the use of your program with an example graph.**
 
 This program represents an undirected graph using an adjacency matrix and performs Breadth First Search (BFS) and Depth First Search (DFS) traversals.
 

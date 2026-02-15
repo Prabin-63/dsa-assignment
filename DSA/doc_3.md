@@ -1,7 +1,8 @@
 # Reverse Traversal of Linked List Using Recursion in C
 
 ## GIVEN QUESTION:
-**Write and implement the reverse traversal algorithm in the linked list. Write main() to demonstrate the use of the function.**
+**Write and Implement the reverse traversal algorithm in the linked list. Write main() to
+demonstrate the use of the function.**
 
 This program demonstrates how to perform reverse traversal of a singly linked list using recursion in C. The linked list is created manually in the main() function, and a recursive function is used to print the elements in reverse order.
 
