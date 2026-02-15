@@ -46,4 +46,4 @@ struct Node {
         2  25  4
 
 ## Sample Output
-![O4](Output/O4.png "Program 4 output")
+![O4](../Output/O4.png "Program 4 output")

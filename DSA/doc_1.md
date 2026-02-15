@@ -2,7 +2,7 @@
 ## GIVEN QUESTION:
 
 **Write a program to check if any given mathematical expression has a balanced number of parentheses or not?
-Run the program by testing following expression-
+Run the program by testing following expression-<br>
 ⇒a + (b − c) ∗ (d <br>
 ⇒m + [a − b ∗ (c + d ∗ {m)] <br>
 ⇒a + (b − c)**
@@ -36,4 +36,4 @@ This program checks whether a given mathematical expression has balanced parenth
     - Returns balanced if all brackets match and the stack is empty
 
 ## Sample Output
-![O1](Output/O1.png "Program 1 output")
+![O1](../Output/O1.png "Program 1 output")
