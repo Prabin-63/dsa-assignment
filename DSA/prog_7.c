@@ -1,11 +1,13 @@
-#include <stdio.h>
+/*Given a weighted graph, implement Dijkstra’s algorithm to find the shortest path from a
+source node to all other nodes.*/
 
-#define INF 999
+#include <stdio.h>
+#define INF 999 //defining some infinity number for unknown distance
 #define MAX 10
 
 int n;
 
-/* Find vertex with minimum distance */
+//For minimum distance
 int minDistance(int dist[], int visited[]) {
     int min = INF, index = -1;
 
@@ -18,7 +20,7 @@ int minDistance(int dist[], int visited[]) {
     return index;
 }
 
-/* Dijkstra Algorithm */
+// Dijkstra Algorithm
 void dijkstra(int graph[MAX][MAX], int src) {
     int dist[MAX], visited[MAX];
 

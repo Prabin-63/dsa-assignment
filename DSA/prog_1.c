@@ -46,16 +46,16 @@ int checkBalance(char expr[]) {
     top = -1;
     for (int i = 0; i < strlen(expr); i++) {
 
-        // Opening brackets
+        // To check opening brackets
         if (expr[i] == '(' || expr[i] == '{' || expr[i] == '[') {
             push(expr[i]);
         }
 
-        // Closing brackets
+        // To check closing brackets
         else if (expr[i] == ')' || expr[i] == '}' || expr[i] == ']') {
 
             if (top == -1)
-                return 0;   // Stack empty: not balanced
+                return 0;   // Stack empty
 
             char ch = pop();
 
@@ -66,7 +66,7 @@ int checkBalance(char expr[]) {
         }
     }
 
-    // If stack is empty → balanced
+    // If stack is empty i.e. it is balanced
     return (top == -1);
 }
 
@@ -76,7 +76,7 @@ int main() {
     char expr2[] = "m + [a − b ∗ (c + d ∗ {m)]";
     char expr3[] = "a + (b − c)";
 
-    printf("%s -> %s\n", expr1, checkBalance(expr1) ? "Balanced" : "Not Balanced");
+    printf("%s -> %s\n", expr1, checkBalance(expr1) ? "Balanced" : "Not Balanced"); //Using ternary operator to check
     printf("%s -> %s\n", expr2, checkBalance(expr2) ? "Balanced" : "Not Balanced");
     printf("%s -> %s\n", expr3, checkBalance(expr3) ? "Balanced" : "Not Balanced");
 

@@ -1,12 +1,15 @@
-#include <stdio.h>
+/*How can we implement the undirected graph using the adjacency matrix? Write a function
+that implements the BFS and DFS technique to traverse through the graph. Demonstrate
+the use of your program with an example graph.*/
 
+#include <stdio.h>
 #define MAX 10
 
 int adj[MAX][MAX];
 int visited[MAX];
 int n;
 
-/* BFS Function */
+//BFS implementation
 void BFS(int start) {
     int queue[MAX], front = 0, rear = 0;
     int i;
@@ -33,7 +36,7 @@ void BFS(int start) {
     printf("\n");
 }
 
-/* DFS Function */
+//DFS Implementation
 void DFS(int v) {
     int i;
     visited[v] = 1;
@@ -46,6 +49,7 @@ void DFS(int v) {
     }
 }
 
+//main
 int main() {
     int i, j, start;
 

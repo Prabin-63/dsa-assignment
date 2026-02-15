@@ -1,17 +1,21 @@
+/*Write and Implement the reverse traversal algorithm in the linked list. Write main() to
+demonstrate the use of the function.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
+//defining structure for linked list
 struct ListNode {
     int value;
     struct ListNode* next;
 };
 
-/* reverse traversal using recursion */
+//Using recursion for reverse transversal
 void printReverse(struct ListNode* node) {
     if (node == NULL)
         return;
 
-    printReverse(node->next);
+    printReverse(node->next);  //Yo chai recursion function
     printf("%d ", node->value);
 }
 

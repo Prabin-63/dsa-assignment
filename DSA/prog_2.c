@@ -1,21 +1,23 @@
+/*Write a program to convert an infix mathematical expression to postfix and evaluate it.*/
+
 #include <stdio.h>
 #include <ctype.h>
-
 #define MAX 50
 
 char stack[MAX];
 int top = -1;
 
-/* Stack operations */
+// Stack operations 
+//Push
 void push(char x) {
     stack[++top] = x;
 }
-
+//Pop
 char pop() {
     return stack[top--];
 }
 
-/* Operator precedence */
+// Operator precedence
 int priority(char x) {
     if (x == '(') return 0;
     if (x == '+' || x == '-') return 1;
@@ -23,7 +25,7 @@ int priority(char x) {
     return 0;
 }
 
-/* Infix to Postfix */
+// Infix to Postfix
 void infixToPostfix(char infix[], char postfix[]) {
     int i = 0, k = 0;
     char x;
@@ -53,7 +55,7 @@ void infixToPostfix(char infix[], char postfix[]) {
     postfix[k] = '\0';
 }
 
-/* Postfix Evaluation */
+// Postfix Evaluation
 int evaluatePostfix(char postfix[]) {
     int stack2[MAX];
     int top2 = -1;

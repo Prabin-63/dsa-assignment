@@ -1,14 +1,16 @@
+/*Given the array of the data (unsorted), Write a program to build the min and max heap.*/
+
 #include <stdio.h>
 
-/* Swap function */
+//Swapping
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-/* Min Heapify */
-void minHeapify(int arr[], int n, int i) {
+//Min heap
+void minHeap(int arr[], int n, int i) {
     int smallest = i;
     int left = 2*i + 1;
     int right = 2*i + 2;
@@ -21,18 +23,18 @@ void minHeapify(int arr[], int n, int i) {
 
     if (smallest != i) {
         swap(&arr[i], &arr[smallest]);
-        minHeapify(arr, n, smallest);
+        minHeap(arr, n, smallest);  //Recursion function used
     }
 }
 
-/* Build Min Heap */
+
 void buildMinHeap(int arr[], int n) {
     for (int i = n/2 - 1; i >= 0; i--)
-        minHeapify(arr, n, i);
+        minHeap(arr, n, i);
 }
 
-/* Max Heapify */
-void maxHeapify(int arr[], int n, int i) {
+//Max Heap
+void maxHeap(int arr[], int n, int i) {
     int largest = i;
     int left = 2*i + 1;
     int right = 2*i + 2;
@@ -45,17 +47,17 @@ void maxHeapify(int arr[], int n, int i) {
 
     if (largest != i) {
         swap(&arr[i], &arr[largest]);
-        maxHeapify(arr, n, largest);
+        maxHeap(arr, n, largest);  //Recursion function used
     }
 }
 
-/* Build Max Heap */
+
 void buildMaxHeap(int arr[], int n) {
     for (int i = n/2 - 1; i >= 0; i--)
-        maxHeapify(arr, n, i);
+        maxHeap(arr, n, i);
 }
 
-/* Display array */
+
 void display(int arr[], int n) {
     for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
@@ -64,7 +66,7 @@ void display(int arr[], int n) {
 
 int main() {
     int arr[] = {4, 10, 3, 5, 1};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int n = sizeof(arr)/sizeof(arr[0]);  //defining number of terms in array
 
     int minHeap[10], maxHeap[10];
 
